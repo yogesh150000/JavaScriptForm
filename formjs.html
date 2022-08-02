@@ -1,0 +1,31 @@
+<html>
+<body align="center">
+<script>
+function validateform(){   
+var name=document.myform.name.value;  
+var password=document.myform.password.value;  
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  return false;  
+  }  
+} 
+function colorPickerBodyBG() {
+ document.body.style.backgroundColor = document.getElementById("CP").value;
+ } 
+</script>  
+<body> <br><br><br><br><br><br>  <br><br><br><br>  <b>Form</b> <br><br>
+<form name="myform" method="post"  onsubmit="return validateform()" >  
+Email: <input type="text" name="name"><br/>  
+Username: <input type="text" name="name"><br/>
+Password: <input type="password" name="password"><br/>  
+<input type="submit" value="Ok">  
+<input type="submit" value="cancel">
+<br><br>
+ <input type="color" id="CP" onchange="colorPickerBodyBG()" />
+</form>  
+</body>
+</html>
